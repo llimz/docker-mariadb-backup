@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  mariadbbackup:
+    build: .
+    container_name: mariadbbackup
+    env_file:
+      - .env
+    volumes:
+      - ./db-backup:/data/db-backup
+      - ./backup_mysql.sh:/backup_mysql.sh:ro
