@@ -7,4 +7,4 @@ services:
       - stack.env
     volumes:
       - ./db-backup:/data/db-backup
-      - ./backup_mysql.sh:/backup_mysql.sh:ro
+      - ./backup_mysql.sh:/backup_mysql.sh
