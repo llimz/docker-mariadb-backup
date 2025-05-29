@@ -33,7 +33,7 @@ if [[ $RETRY_COUNT -eq $MAX_RETRIES ]]; then
 fi
 
 ##LOOPSTART
-find $DIR/* -mtime +30 -exec rm {} \;
+find "$DIR" -type f -mtime +30 -delete
 
 TIMESTAMP2="$(date '+%Y%m%d%H%M')"
 TIMESTAMP="$(date +"%F")"
