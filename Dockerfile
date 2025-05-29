@@ -1,7 +1,7 @@
 FROM alpine:3.18
 
 RUN apk add --no-cache \
-    bash gzip mariadb-client curl mailx openrc borgbackup rsync openssh-client sshpass jq \
+    bash nano gzip mariadb-client curl mailx openrc borgbackup rsync openssh-client sshpass jq \
   && rm -rf /var/cache/apk/*
 
 COPY backup_mysql.sh /backup_mysql.sh
